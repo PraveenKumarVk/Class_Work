@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <script type="text/javascript">
+        var n;
+        function num(){
+            n=document.getElementById("fno").value;
+            var answer=res(n);
+            document.getElementById("p1").innerHTML = answer;
+        }
+        var res=(n)=>{
+            if(n<=1){
+                return 1;
+            }
+            else{
+                return n*res(n-1);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="fno">Enter the No.</label><br>
+            <input type="text" name="fno" id="fno"><br><br>
+            <button type="submit" onclick="num();">Factorial!</button><br>
+        </form>
+        <p id="p1"></p>
+    </div>
+</body>
+</html>

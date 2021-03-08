@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <form>
+        <button type="submit" onclick="dpush();">Push!!</button><br><br>
+        <button type="submit" onclick="ddpop();">Pop!!</button><br><br>
+        <button type="submit" onclick="ddshift();">Shift!!</button><br><br>
+        <button type="submit" onclick="dunshift();">Unshift!!</button><br><br>
+        <button type="submit" onclick="ddsize();">Size!!</button><br><br>
+    </form>
+
+    <script>
+        var arr=[];
+        function ddpop(){
+            if(arr.length==0)
+            alert("You have no elements to pop");
+            else{
+                var x=arr.pop();
+                alert("Popped element is:"+x);
+            }
+        }
+        function ddshift(){
+            if(arr.length==0)
+            alert("You have no elements to shift");
+            else{
+                var y=arr.shift();
+                alert("Shifted element is:"+y);
+            }
+        }
+        function ddsize(){
+            alert("Size of array is "+arr.length);
+        }
+        function dpush(){
+            var val=prompt("Enter element to be pushed");
+            arr.push(val);
+            showarray();
+        }
+        function dunshift(){
+            var val=prompt("Enter element to be unshifted");
+            arr.unshift(val);
+            showarray();
+        }
+
+        function showarray(){
+            body="Array elements are:";
+            if(arr.length==0)
+            alert("Array is empty");
+            else{
+                for(var i=0;i<arr.length;i++){
+                body+=" ";
+                body+=arr[i];
+            }
+            alert(body);
+            }
+            
+        }
+    </script>
+</body>
+</html>

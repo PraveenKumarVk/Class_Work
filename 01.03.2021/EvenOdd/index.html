@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+    <script>
+        var n;
+        function EOO(){
+            n=document.getElementById("fno").value;
+            if(n%2==0){
+                console.log("even");
+                document.getElementById("even").style.color="white";
+                document.getElementById("even").style.backgroundColor="green";
+            }
+            else{
+                console.log("odd");
+                document.getElementById("odd").style.color="white";
+                document.getElementById("odd").style.backgroundColor="green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="fno">Enter the No.</label><br>
+            <input type="text" name="fno" id="fno"><br><br>
+            <button type="submit" onclick="EOO();">Find whether it's Even or Odd!</button><br>
+            <span id="even">Even</span>
+            <span id="odd">Odd</span>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+<body>
+    <form>
+        <label for="arrval">Enter Student details-:</label><br><br>
+        <input type="text" name="arrval" id="arrval" placeholder="Name"><br><br>
+        <input type="text" name="arrval2" id="arrval2" placeholder="Phone No."><br><br>
+        <input type="text" name="arrval3" id="arrval3" placeholder="Roll No"><br><br>
+        <input type="text" name="arrval4" id="arrval4" placeholder="Class"><br><br>
+        <button type="submit" onclick="func();" id="submit">Submit</button>
+        <p>Student's Name is <span id="val1"></span></p>
+        <p>Student's Phone No. is <span id="val2"></span></p>
+        <p>Student's Roll No. is <span id="val3"></span></p>
+        <p>Student's Class is <span id="val4"></span></p>
+
+    </form>
+    <script>
+        function func(){
+            const student={name:document.getElementById("arrval").value,pno:document.getElementById("arrval2").value,rno:document.getElementById("arrval3").value,class:document.getElementById("arrval4").value};
+            const {name:a,pno:b,rno:c,class:d} =student;
+            document.getElementById("val1").innerHTML=a;
+            document.getElementById("val2").innerHTML=b;
+            document.getElementById("val3").innerHTML=c;
+            document.getElementById("val4").innerHTML=d;
+        }
+    </script>
+</body>
+</html>

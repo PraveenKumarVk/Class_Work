@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Demo</title>
+    <script>
+        class student{
+            constructor(name,rollNo,mail,m1,m2,m3){
+                this.name=name;
+                this.rollNo=rollNo;
+                this.mail=mail;
+                this.m1=m1;
+                this.m2=m2;
+                this.m3=m3;
+            }
+        }
+        function func(){
+            let res=new student(document.getElementById("name").value,document.getElementById("rollNo").value,document.getElementById("mail").value,document.getElementById("m1").value,document.getElementById("m2").value,document.getElementById("m3").value);
+            document.getElementById("para").innerHTML="Student is "+res.name+" bearing roll no. "+res.rollNo+". His mail id is "+res.mail+". His marks in m1,m2,m3 are "+res.m1+res.m2+res.m3+" consecutively.";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="fno">Enter the details.</label><br>
+        <input type="text" placeholder="Name" name="name" id="name"><br><br>
+        <input type="text" placeholder="Roll No." name="rollNo" id="rollNo"><br><br>
+        <input type="text" placeholder="Mail Id" name="mail" id="mail"><br><br>
+        <input type="text" placeholder="M1 marks" name="m1" id="m1"><br><br>
+        <input type="text" placeholder="M2 marks" name="m2" id="m2"><br><br>
+        <input type="text" placeholder="M3 marks" name="m3" id="m3"><br><br>
+        <button type="submit" onclick="func();">Submit!</button><br>
+        <span id="para"></span>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array</title>
+</head>
+<body>
+    <form>
+        <label for="arrval">Enter colors:</label><br><br>
+        <input type="text" name="arrval" id="arrval"><br><br>
+        <input type="text" name="arrval2" id="arrval2"><br><br>
+        <input type="text" name="arrval3" id="arrval3"><br><br>
+        <input type="text" name="arrval4" id="arrval4"><br><br>
+        <button type="submit" onclick="func();" id="submit">Submit</button>
+        <p>Blood is <span id="val1"></span></p>
+        <p>Milk is <span id="val2"></span></p>
+        <p>Sky is <span id="val3"></span></p>
+        <p>Tree is <span id="val4"></span></p>
+
+    </form>
+    <script>
+        function func(){
+            const vals=[document.getElementById("arrval").value,document.getElementById("arrval2").value,document.getElementById("arrval3").value,document.getElementById("arrval4").value];
+            const [blood,milk,sky,tree]=vals;
+            document.getElementById("val1").innerHTML=blood;
+            document.getElementById("val2").innerHTML=milk;
+            document.getElementById("val3").innerHTML=sky;
+            document.getElementById("val4").innerHTML=tree;
+        }
+    </script>
+</body>
+</html>

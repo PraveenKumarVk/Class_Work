@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="some" id="some" placeholder="name">
+    <input type="number" name="some2" id="some2" placeholder="age">
+    <button type="submit" onclick="func();">Click Me!</button>
+    <script>
+        function someFunc(arg) {
+            alert("Welcome "+arg.foo);
+            alert("Happy "+arg.bar);
+        }
+        function func(){
+            const obj={foo: document.getElementById("some").value, bar: document.getElementById("some2").value};
+            someFunc(obj);
+        }
+    </script>
+</body>
+</html>
